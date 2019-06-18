@@ -11,6 +11,7 @@
     <modules>
         <module>diy-dubbo</module>
         <module>diy-rpc</module>
+        <module>netty-rpc</module>
     </modules>
 
     <build>
