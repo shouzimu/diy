@@ -12,6 +12,9 @@
         <module>diy-dubbo</module>
         <module>diy-rpc</module>
         <module>netty-rpc</module>
+        <module>diy-tomcat</module>
+        <module>demo-spring-boot-starter</module>
+        <module>course</module>
     </modules>
 
     <build>
