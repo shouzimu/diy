@@ -13,7 +13,7 @@
 
     <properties>
         <curator.version>4.0.0</curator.version>
-        <zookeeper.version>3.4.10</zookeeper.version>
+        <zookeeper.version>3.4.14</zookeeper.version>
     </properties>
 
     <dependencies>
