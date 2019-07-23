@@ -2,8 +2,10 @@ package com.dh.rpc.register;
 
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import java.io.File;
+import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
@@ -15,7 +17,7 @@ public class RegisterHandler extends ChannelInboundHandlerAdapter {
     //3、
 
 
-    private Set<String> classNames;
+    private Set<String> classNames = new HashSet<>();
     Map<String, Object> serviceMap;
 
     private void doRegistry() {
@@ -30,8 +32,8 @@ public class RegisterHandler extends ChannelInboundHandlerAdapter {
                 Class<?> clazz = Class.forName(className);
                 Class<?> i = clazz.getInterfaces()[0];
 
-                serviceMap.put(i.getName(), clazz.newInstance());
-            } catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
+                serviceMap.put(i.getName(), clazz.getDeclaredConstructor().newInstance());
+            } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
                 e.printStackTrace();
             }
 

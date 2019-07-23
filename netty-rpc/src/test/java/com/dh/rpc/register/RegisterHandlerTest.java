@@ -9,7 +9,7 @@ public class RegisterHandlerTest {
     @Test
     public void testScannerClass() {
         RegisterHandler handler = new RegisterHandler();
-        handler.scannerClass(new String[]{"com.dh.rpc.register"});
+        handler.scannerClass("com.dh.rpc.register");
     }
 
 
