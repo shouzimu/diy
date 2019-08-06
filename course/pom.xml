@@ -14,6 +14,7 @@
     <modules>
         <module>zk-demo</module>
         <module>dubbo-demo</module>
+        <module>nacos-demo</module>
     </modules>
 
 </project>
