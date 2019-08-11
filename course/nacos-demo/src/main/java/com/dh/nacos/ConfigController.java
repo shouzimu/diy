@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("config")
 public class ConfigController {
 
-    @NacosValue(value = "${useLocalCache}", autoRefreshed = true)
+    @NacosValue(value = "${test01}", autoRefreshed = true)
     private String useLocalCache;
 
 
