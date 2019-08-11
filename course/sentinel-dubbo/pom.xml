@@ -16,6 +16,7 @@
         <module>sentinel-provider</module>
         <module>sentinel-web</module>
         <module>sentinel-token-server</module>
+        <module>sentinel-demo</module>
     </modules>
 
 
