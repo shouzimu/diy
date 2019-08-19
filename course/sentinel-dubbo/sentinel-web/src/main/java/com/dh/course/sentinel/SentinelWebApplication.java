@@ -6,6 +6,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.PropertySource;
 
+/**
+ * 压测参数如下，使用ab
+ *  ab -n 500 -c 100 http://localhost:7070/sentinel/say/hellowerwer
+ */
 @SpringBootApplication
 @EnableDubbo
 @PropertySource(value = "classpath:/dubbo-config.properties")
